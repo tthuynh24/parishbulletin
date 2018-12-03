@@ -1,0 +1,19 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+      <file alias="Advertise">Advertise.png</file>
+      <file alias="Bulletin">Bulletin.png</file>
+      <file alias="Calendar">Calendar.png</file>
+      <file alias="Editor">Editor.png</file>
+      <file alias="Exit">Exit.png</file>
+      <file alias="Max">Max.png</file>
+      <file alias="Min">Min.png</file>
+      <file alias="Norm">Norm.png</file>
+      <file alias="OpenFile">OpenFile.png</file>
+      <file alias="page">page.png</file>
+      <file alias="PDF">PDF.png</file>
+      <file alias="Print">Print.png</file>
+      <file alias="Printer">Printer.png</file>
+      <file alias="Register">Register.png</file>
+      <file alias="Save">Save.png</file>
+    </qresource>
+  </RCC>

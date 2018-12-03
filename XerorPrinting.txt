@@ -1,0 +1,15 @@
+Adjusting Paper Size under Printer Properties Does Not Update the Application 
+Jump to solution
+
+Using the latest Xerox printer drivers, either the Phaser 7750GX / 7760GX specific drivers or the Xerox Global Print drivers, 
+we are getting different behavior in Adobe Reader and Adobe Acrobat Standard / Professional than we did with prior Windows XP drivers.  
+The behavior is also different from the latest print drivers for all the other printers we use in use, 
+both standalone printers and digital copiers.  Specifically, when you go to print a PDF document, select the Xerox printer, 
+then click Properties, if you change the Paper Size (for example from Letter to Tabloid), then click OK, the Paper Size change is 
+not fed back to the Adobe application.  All other printer drivers we use, including XP-version Xerox printer drivers, successfully 
+feed back the Paper Size change.  Is there any way to do this with the latest Xerox printer drivers?  Thanks!
+
+Re: Adjusting Paper Size under Printer Properties Does Not Update the Application 
+I found the solution.  In the Xerox printer properties dialog box, click the Paper drop-down and select "Other Size..."  
+Then in the "Original Document Size: drop-down box (4th drop-down box from the top), choose the desired paper size.  
+Then click Close, OK, OK, and when you return to the PDF document it will show the dimensions of the new paper size chosen.

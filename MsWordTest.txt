@@ -1,0 +1,46 @@
+﻿
+2
+down vote
+accepted
+That's because wdActiveEndPageNumber is a constant that not defined by win32com, until you generate the COM type library from the application. Try this: 
+from win32com.client.gencache import EnsureDispatch
+from win32com.client import constants
+word = EnsureDispatch("Word.Application")
+mydoc = word.Documents.Open("path:\\to\\file")
+mydoc.ActiveWindow.Selection.Information(constants.wdActiveEndPageNumber)
+
+
+
+
+import sys
+import os
+from win32com.client import gencache, constants
+WORD='Word.Application'
+False,True=0,-1
+
+class Word:
+    def __init__(self):
+        self.app=gencache.EnsureDispatch(WORD)
+        self.app.Visible = 1
+        self.app.DisplayAlerts = 0
+    def open(self,doc):
+        self.app.Documents.Open(FileName=doc) 
+    def removewatermark(self):
+        self.app.ActiveDocument.Sections(1).Range.Select()
+        self.app.ActiveWindow.ActivePane.View.SeekView = 9 # wdSeekCurrentPageHeader
+        self.app.Selection.HeaderFooter.Shapes("PowerPlusWaterMarkObject1").Select()
+        self.app.Selection.Delete()
+        self.app.ActiveWindow.ActivePane.View.SeekView = 0 #wdSeekMainDocument 
+
+
+
+>      >     def open(self,doc): 
+>      >         self.app.Documents.Open(FileName=doc) 
+>      >     def removewatermark(self): 
+>      >         self.app.ActiveDocument.Sections(1).Range.Select() 
+>      >         self.app.ActiveWindow.ActivePane.View.SeekView = 9 # 
+>      > wdSeekCurrentPageHeader 
+
+
+
+
